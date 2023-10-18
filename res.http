@@ -1,0 +1,7 @@
+###
+POST http://localhost:4200/api/snowflake
+Content-Type: application/json
+
+{
+  "sql":"SELECT * FROM MDL_COURSE_CO" 
+}
