@@ -10,9 +10,9 @@ const app = express()
 app.use(express.json())
 
 app.post('/api/snowflake', (req, res) => {
- const { sql:sqlText } = req.body
+ const { sql } = req.body
  conn.execute({
-    sqlText,
+    sqlText:`${sql}`,
     complete: (err, stmt, rows) => {
       if(err){
         res.json({ error:err.message })
